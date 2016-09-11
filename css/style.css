@@ -1,0 +1,156 @@
+@import url('fonts.css');
+
+body
+{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+/*-- Header start --*/
+.header__address
+{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    display: block;
+    background-color: #182061;
+    color: #ffffff;
+}
+
+.header-address-email
+{
+    width: auto;
+    height: 30px;
+    position: relative;
+    display: block;
+    float: right;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    text-align: right;
+    color: #ffffff;
+    font-family: inherit;
+}
+.header-address__phone
+{
+    width: auto;
+    height: 30px;
+    float: left;
+    display: block;
+    position: relative;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.phone__number
+{
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.header__main-section
+{
+    display: block;
+    position: absolute;
+    background: url('../assets/main-section-bg.jpg') no-repeat top center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 30px;
+    /* height: 713px; */
+}
+
+.header__main-section:before
+{
+    background: rgba(0,0,0,.4);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+/*-- header menu --*/
+
+ul.header-menu
+{
+    display: block;
+    height: auto;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.header-menu li
+{
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.header-menu li:first-child
+{
+    margin-left: 0;
+}
+
+a.header-menu__link
+{
+    color: #ffffff;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+
+a.header-menu__link:hover
+{
+    border-bottom: 3px solid #b29b3f;
+}
+
+.header-menu li > a.active
+{
+    border-bottom: 3px solid #a7acff;
+}
+
+/*-- header center content --*/
+
+.header-center-content
+{
+    display: block;
+    height: auto;
+    position: relative;
+    margin-top: 130px;
+    text-align: center;
+}
+.logo
+{   
+    border: 1px solid;
+    display: inline-block;
+    height: 60px;
+    width: 130px;
+    vertical-align: middle;
+}
+
+@media (min-width:1200px)
+{
+    .container
+    {
+        width: 1024px;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+}
+
+
