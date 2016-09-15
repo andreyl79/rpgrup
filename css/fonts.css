@@ -1,4 +1,4 @@
-.header-center-content h1 /*-- only on the start page logo --*/
+.header__center h1/*-- only on the start page logo --*/
 {
 	color: #ffffff;
 	font-size: 50px;
@@ -7,10 +7,17 @@
 	vertical-align: middle;
 }
 
-.header-center-content h3
+.header__center h3
 {
 	color: #ffffff;
 	font-size: 26px;
 	font-weight: 300;
-	margin-top: 30px;
+	margin-top: 20px;
+}
+
+h1.section-header
+{
+	font-weight: 600;
+	font-size: 28px;
+	text-align: center;
 }
