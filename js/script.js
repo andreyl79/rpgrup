@@ -4,7 +4,7 @@
 		$wH = $(window).height();
 		$headerContentBg = $('.header-content');
 		$headerBgH = $headerContentBg.height($wH - 30);		
-	}
+	};
 
 	function readmore (){
 		var $el, $ps, $up, totalHeigth, $sectionAboutContent, $readMoreButt, $pMore, $sectionElements, $closeButt, $sectionAboutH;
@@ -51,10 +51,29 @@
 			return false;
 		})
 	}
+			function projDescr(){
+			var projElement, elementImg, elementDescr;
+			projElement = $('.element');
+			elementImg = $('.element-img');
+			elementDescr = $('.element-descr');
+			projElement.click(function(){
+				projElement.not(this)
+					.removeClass('element--active')
+					.css('z-index','90')
+					.find(elementDescr)
+					.removeClass('descr-active');
+
+				$(this).toggleClass('element--active')
+					.css('z-index','')
+					.find(elementDescr)
+					.toggleClass('descr-active');
+			});
+		};
 
 
 $(document).ready(function(){
 	indexbg();
 	readmore();
+	projDescr();
 })
 })(jQuery)
