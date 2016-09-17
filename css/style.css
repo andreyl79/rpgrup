@@ -642,6 +642,17 @@ input:focus ~ .highlight
     margin-right: 10px;
 }
 
+.contacts__mail a
+{
+    color: #fff;
+}
+
+.footer__powered-by a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
 .social-icons 
 {
     position: absolute;
