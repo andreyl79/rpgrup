@@ -18,19 +18,22 @@
                 <div class="header__bg"></div>
                 <div class="header__address-bar">
                     <div class="container">
-                        <div class="header-address__phone">
-                            <i class="fa fa-phone"></i>
-                            <span class="phone__number">8 (546) 310-03-54</span>
-                        </div>
-                        <div class="header-address__street">
-                            <span class="street">Россия, г.Самара, ул.Агибалова, 48</span>
-                        </div>
-                        <div class="header-address-email">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="email-address__link"><a href="mailto:info@russproektgroup.com">info@russproektgroup.com</a></span>
+                        <button id="menu-reveal" class="btn-close">Контакты</button>
+                        <div class="header__contacts">
+                            <div class="header-address__phone">
+                                <i class="fa fa-phone"></i>
+                                <span class="phone__number">8 (546) 310-03-54</span>
+                            </div>
+                            <div class="header-address__street">
+                                <span class="street">Россия, г.Самара, ул.Агибалова, 48</span>
+                            </div>
+                            <div class="header-address-email">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="email-address__link"><a href="mailto:info@russproektgroup.com">info@russproektgroup.com</a></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="mobile-header-menu__contacts">
+                    <div id="mobile-header-menu__contacts">
                         <ul>
                             <li>
                                 <a href="#">Россия, г.Самара, ул.Агибалова, 48</a>
@@ -109,7 +112,7 @@
             </header>
             <section class="about">
                 <div class="container">
-                    <h1 class="section-header">О компании</h1>
+                    <h1 id="about-start" class="section-header">О компании</h1>
                     <div class="section-content">
                         <p>ООО «Руспроектгруп» с 2010 года является крупной архитектурно-проектной
 организацией, за прошедшие 6,5 лет нашей организацией было выполнено
@@ -136,53 +139,83 @@
                 <div class="container">
                     <h1 class="section-header">Проекты</h1>
                     <div class="section-content">
-                        <div class="projects-elements">
-                            <div class="element">
-                                <img src="assets/projects/1.jpg" alt="" class="element-img">
-                                <div class="element-descr">
-                                    <h3>Title</h3>
-                                    <p class="element-short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ea fugiat impedit rerum vel veniam. Dolore facere harum magni mollitia perferendis quae qui rerum unde voluptates voluptatum? Illo, magnam, voluptatibus.</p>
-                                    <button class="btn-readmore">Подробней</button>
+                        <div class="projects-items">
+                            <div class="item__container">
+                                <div class="item">
+                                    <div class="item__content a--1x1">
+                                        <div class="item-content__img a--fixed">
+                                            <img src="assets/projects/1.jpg" alt="test">
+                                        </div>
+                                        <div class="item-descr">
+                                            <p class="short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloremque, eius eos est excepturi iste, maiores pariatur quam recusandae saepe similique, tempora temporibus ullam voluptatem. Distinctio eos officia quod.</p>
+                                            <button class="btn-projects-readmore">Подробней</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="element">
-                                <img src="assets/projects/2.jpg" alt="" class="element-img">
-                                <div class="element-descr">
-                                    <h3>Title</h3>
-                                    <p class="element-short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ea fugiat impedit rerum vel veniam. Dolore facere harum magni mollitia perferendis quae qui rerum unde voluptates voluptatum? Illo, magnam, voluptatibus.</p>
-                                    <button class="btn-readmore">Подробней</button>
+                            <div class="item__container">
+                                <div class="item">
+                                    <div class="item__content a--1x1">
+                                        <div class="item-content__img a--fixed">
+                                            <img src="assets/projects/2.jpg" alt="test">
+                                        </div>
+                                        <div class="item-descr">
+                                            <p class="short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloremque, eius eos est excepturi iste, maiores pariatur quam recusandae saepe similique, tempora temporibus ullam voluptatem. Distinctio eos officia quod.</p>
+                                            <button class="btn-projects-readmore">Подробней</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="element">
-                                <img src="assets/projects/3.jpg" alt="" class="element-img">
-                                <div class="element-descr">
-                                    <h3>Title</h3>
-                                    <p class="element-short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ea fugiat impedit rerum vel veniam. Dolore facere harum magni mollitia perferendis quae qui rerum unde voluptates voluptatum? Illo, magnam, voluptatibus.</p>
-                                    <button class="btn-readmore">Подробней</button>
+                            <div class="item__container">
+                                <div class="item">
+                                    <div class="item__content a--1x1">
+                                        <div class="item-content__img a--fixed">
+                                            <img src="assets/projects/3.jpg" alt="test">
+                                        </div>
+                                        <div class="item-descr">
+                                            <p class="short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloremque, eius eos est excepturi iste, maiores pariatur quam recusandae saepe similique, tempora temporibus ullam voluptatem. Distinctio eos officia quod.</p>
+                                            <button class="btn-projects-readmore">Подробней</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="element">
-                                <img src="assets/projects/4.jpg" alt="" class="element-img">
-                                <div class="element-descr">
-                                    <h3>Title</h3>
-                                    <p class="element-short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ea fugiat impedit rerum vel veniam. Dolore facere harum magni mollitia perferendis quae qui rerum unde voluptates voluptatum? Illo, magnam, voluptatibus.</p>
-                                    <button class="btn-readmore">Подробней</button>
+                            <div class="item__container">
+                                <div class="item">
+                                    <div class="item__content a--1x1">
+                                        <div class="item-content__img a--fixed">
+                                            <img src="assets/projects/4.jpg" alt="test">
+                                        </div>
+                                        <div class="item-descr">
+                                            <p class="short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloremque, eius eos est excepturi iste, maiores pariatur quam recusandae saepe similique, tempora temporibus ullam voluptatem. Distinctio eos officia quod.</p>
+                                            <button class="btn-projects-readmore">Подробней</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="element">
-                                <img src="assets/projects/2.jpg" alt="" class="element-img">
-                                <div class="element-descr">
-                                    <h3>Title</h3>
-                                    <p class="element-short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ea fugiat impedit rerum vel veniam. Dolore facere harum magni mollitia perferendis quae qui rerum unde voluptates voluptatum? Illo, magnam, voluptatibus.</p>
-                                    <button class="btn-readmore">Подробней</button>
+                            <div class="item__container">
+                                <div class="item">
+                                    <div class="item__content a--1x1">
+                                        <div class="item-content__img a--fixed">
+                                            <img src="assets/projects/3.jpg" alt="test">
+                                        </div>
+                                        <div class="item-descr">
+                                            <p class="short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloremque, eius eos est excepturi iste, maiores pariatur quam recusandae saepe similique, tempora temporibus ullam voluptatem. Distinctio eos officia quod.</p>
+                                            <button class="btn-projects-readmore">Подробней</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="element">
-                                <img src="assets/projects/6.jpg" alt="" class="element-img">
-                                <div class="element-descr">
-                                    <h3>Title</h3>
-                                    <p class="element-short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ea fugiat impedit rerum vel veniam. Dolore facere harum magni mollitia perferendis quae qui rerum unde voluptates voluptatum? Illo, magnam, voluptatibus.</p>
-                                    <button class="btn-readmore">Подробней</button>
+                            <div class="item__container">
+                                <div class="item">
+                                    <div class="item__content a--1x1">
+                                        <div class="item-content__img a--fixed">
+                                            <img src="assets/projects/6.jpg" alt="test">
+                                        </div>
+                                        <div class="item-descr">
+                                            <p class="short-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloremque, eius eos est excepturi iste, maiores pariatur quam recusandae saepe similique, tempora temporibus ullam voluptatem. Distinctio eos officia quod.</p>
+                                            <button class="btn-projects-readmore">Подробней</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -251,6 +284,7 @@
                 </div>
             </footer>
         </div>
+        <div id = "side-nav-mask"></div>
         <script src="js/jquery-3.1.0.min.js"></script>
         <script src="js/script.js"></script>
     </body>
