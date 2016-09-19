@@ -18,7 +18,8 @@
                 <div class="header__bg"></div>
                 <div class="header__address-bar">
                     <div class="container">
-                        <button id="menu-reveal" class="btn-close">Контакты</button>
+                        <button id="menu-reveal" class="btn-menu float-left">Контакты</button>
+                        <button id="menu-main" class="btn-menu float-right">Меню</button>
                         <div class="header__contacts">
                             <div class="header-address__phone">
                                 <i class="fa fa-phone"></i>
@@ -34,6 +35,9 @@
                         </div>
                     </div>
                     <div id="mobile-header-menu__contacts">
+                        <div class="close-button__block align-right">
+                            <button class="btn-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </div>
                         <ul>
                             <li>
                                 <a href="#">Россия, г.Самара, ул.Агибалова, 48</a>
@@ -50,10 +54,13 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mobile-header-menu__main">
+                    <div id="mobile-header-menu__main">
+                        <div class="close-button__block align-left">
+                            <button class="btn-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </div>
                         <ul>
                             <li>
-                                <a href="#">Главная</a>
+                                <a href="#" class="menu-link--active">Главная</a>
                             </li>
                             <li>
                                 <a href="#">О нас</a>

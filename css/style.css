@@ -833,7 +833,40 @@ input:focus ~ .highlight
         -o-transform: translateX(-241px);
         transform: translateX(-241px);
     }
-    #mobile-header-menu__contacts.visible
+    #mobile-header-menu__main
+    {
+        color: black;
+        position: fixed;
+        z-index: 4;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        padding: 15px;
+        width: 240px;
+        background: lightgrey;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
+        -moz-box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
+        box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
+        -webkit-overflow-scrolling: touch;
+        -webkit-transition: all 300ms;
+        -moz-transition: all 300ms;
+        -ms-transition: all 300ms;
+        -o-transition: all 300ms;
+        transition: all 300ms;
+        -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+        -moz-transition-timing-function: cubic-bezier(.4,0,.2,1);
+        -ms-transition-timing-function: cubic-bezier(.4,0,.2,1);
+        -o-transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        -webkit-transform: translateX(241px);
+        -moz-transform: translateX(241px);
+        -ms-transform: translateX(241px);
+        -o-transform: translateX(241px);
+        transform: translateX(241px);
+    }
+    #mobile-header-menu__contacts.visible, #mobile-header-menu__main.visible
     {
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
@@ -851,6 +884,7 @@ input:focus ~ .highlight
     }
     #mobile-header-menu__contacts ul li a
     {
+        display: block;
         text-decoration: none;
         color: #000;
         padding: 10px 0;
@@ -864,6 +898,27 @@ input:focus ~ .highlight
     #mobile-header-menu__contacts ul li:last-child a
     {
         margin-right: 20px;
+        display: inline-block;
+    }
+    #mobile-header-menu__main ul
+    {
+        position: relative;
+        text-align: right;
+        margin-left: 0;
+        padding: 0;
+        list-style: none;
+    }
+    #mobile-header-menu__main ul li a
+    {
+        text-decoration: none;
+        display: block;
+        color: #000;
+        padding: 15px 0;
+        font-size: 120%;
+    }
+    .menu-link--active
+    {
+        border-bottom: 3px solid #34455b;
     }
     #side-nav-mask
     {
@@ -897,13 +952,12 @@ input:focus ~ .highlight
         visibility: visible;
         opacity: 1;
     }
-    .btn-close
+    .btn-menu
     {
         display: block;
         height: 35px;
         background: none;
         color: white;
-        float: left;
         margin-top: 10px;
         border: 1px solid #fff;
         -webkit-border-radius: 3px;
@@ -911,6 +965,43 @@ input:focus ~ .highlight
         border-radius: 3px;
         font-size: 16px;
         cursor: pointer;
+    }
+    .close-button__block
+    {
+        display: block;
+        position: relative;
+    }
+    .align-right
+    {
+        text-align: right;
+    }
+    .align-left
+    {
+        text-align: left;
+    }
+
+        .btn-close
+    {
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+        background: none;
+        color: white;
+        margin-top: 10px;
+        border: 1px solid #fff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .float-left
+    {
+        float: left;
+    }
+    .float-right
+    {
+        float: right;
     }
 }
 

@@ -76,11 +76,15 @@
     }
 
     function nav() {
-        var $menuButton, $sideNav, $sideNavMask;
+        var $menuButton, $sideNav, $sideNavMask, $mainMenuButton, $sideMainNav, $closeButton;
 
         $menuButton = $('#menu-reveal');
+        $mainMenuButton = $('#menu-main');
         $sideNav = $('#mobile-header-menu__contacts');
+        $sideMainNav = $('#mobile-header-menu__main');
         $sideNavMask = $('#side-nav-mask');
+        $closeButton = $('.btn-close');
+
 
         $menuButton.on('click', function() {
             $sideNav.addClass('visible');
@@ -88,8 +92,15 @@
 			$("html, body").css('position','fixed');
         });
 
-        $sideNavMask.on('click', function() {
+        $mainMenuButton.on('click', function(){
+        	$sideMainNav.addClass('visible');
+        	$sideNavMask.addClass('visible');
+        	$('html,body').css('position','fixed');
+        });
+
+        $sideNavMask.add($closeButton).on('click', function() {
             $sideNav.removeClass('visible');
+            $sideMainNav.removeClass('visible');
             $sideNavMask.removeClass('visible');
 			$("html, body").css('position','');
         });
