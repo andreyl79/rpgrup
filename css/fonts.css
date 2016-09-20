@@ -24,7 +24,7 @@ h1.section-header
 
 p
 {
-	display: block;
+	display: inline-block;
 	padding: 0;
 	text-indent: 40px;
 }

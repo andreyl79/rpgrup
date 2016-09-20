@@ -1,28 +1,26 @@
 (function($){
 	function indexbg (){
-		var $wH, $headerContentBg, $headerBgH, $addressBar;
+		var $wH, $headerContentBg, $headerBgH, $addressBar, $addressBarH;
 		$addressBar = $('.header__address-bar');
-		$addresBarH = $addressBar.outerHeight();
-		console.log($addresBarH);
+		$addressBarH = $addressBar.outerHeight();
 		$wH = $(window).height();
 		$headerContentBg = $('.header-content');
-		$headerBgH = $headerContentBg.height($wH - $addresBarH);
-	};
+		$headerBgH = $headerContentBg.height($wH - $addressBarH);
+	}
 
 	function readmore (){
-		var $el, $ps, $up, totalHeigth, $sectionAboutContent, $readMoreButt, $pMore, $sectionElements, $closeButt, $sectionAboutH;
+		var totalHeight, $sectionAboutContent, $readMoreButt, $pMore, $sectionElements, $closeButt, $sectionAboutH;
 		$readMoreButt = $('.readmore-open');
 		$closeButt = $('.readmore-close');
 		$pMore = $('.more');
 		$sectionAboutContent = $('.about').find('.section-content');
 		$sectionAboutH = $sectionAboutContent.height();
-		console.log($sectionAboutH);
 		$readMoreButt.on('click', function(){
-			totalHeigth = 0;
+			totalHeight = 0;
 			$sectionElements = $sectionAboutContent.children(':not(.more)');
 			$sectionElements.each(function(){
-			totalHeigth += $(this).outerHeight(true);
-			console.log(outerHeight);
+			totalHeight += $(this).outerHeight(true);
+			console.log(totalHeight);
 		});
 		$sectionAboutContent
 			.css({
@@ -30,7 +28,7 @@
 				"max-height": 9999
 			})
 			.animate({
-				"height":totalHeigth
+				"height":totalHeight
 			});
 			$pMore.fadeOut();
 			$readMoreButt.fadeOut();
@@ -58,6 +56,7 @@
 			return false;
 		})
 	}
+
     function projDescr(){
         var item;
         item = $('.item');
@@ -113,4 +112,4 @@ $(document).ready(function(){
 	projDescr();
     nav();
 })
-})(jQuery)
+})(jQuery);

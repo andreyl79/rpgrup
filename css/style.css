@@ -119,10 +119,17 @@ section
     line-height: 29px;
     font-size: 14px;
 }
+
+#mobile-header-menu__contacts, #mobile-header-menu__main, .btn-menu
+{
+    display: none;
+}
+
 .header-address__street{
     display: inline-block;
     text-align: center;
 }
+
 .header-address-email
 {
     display: block;
@@ -178,6 +185,7 @@ section
 {
     color: #ffffff;
     display: block;
+    font-size: 130%;
     padding: 5px;
     text-decoration: none;
 }
@@ -219,22 +227,22 @@ section
 .btn
 {
     background-color: #374199;
-    -webkit-box-shadow: 0px 5px 12px 0px rgba(55,65,153,.58);
-    -moz-box-shadow: 0px 5px 12px 0px rgba(55,65,153,.58);
-    box-shadow: 0px 5px 12px 0px rgba(55,65,153,.58);
+    -webkit-box-shadow: 0 5px 12px 0 rgba(55,65,153,.58);
+    -moz-box-shadow: 0 5px 12px 0 rgba(55,65,153,.58);
+    box-shadow: 0 5px 12px 0 rgba(55,65,153,.58);
     color: #ffffff;
     cursor: pointer;
     border: 0 none;
     border-radius: 2px;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
-    font-size: 14px;
-    padding: 10px 0;
+    font-size: 100%;
+    padding: 15px 0;
     text-transform: uppercase;
     transition: all 0.4s ease; 
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
-    width: 250px;
+    width: 300px;
 }
 
 .btn:active, .btn:focus
@@ -246,9 +254,9 @@ section
 .btn:hover
 {
     background-color: #6566C7;
-    -webkit-box-shadow: 0px 5px 12px 0px rgba(101,102,199,.58);
-    -moz-box-shadow: 0px 5px 12px 0px rgba(101,102,199,.58);
-    box-shadow: 0px 5px 12px 0px rgba(101,102,199,.58);
+    -webkit-box-shadow: 0 5px 12px 0 rgba(101,102,199,.58);
+    -moz-box-shadow: 0 5px 12px 0 rgba(101,102,199,.58);
+    box-shadow: 0 5px 12px 0 rgba(101,102,199,.58);
 }
 
 .btn-header
@@ -288,22 +296,22 @@ section
 
 .koshel
 {
-    width: 120px;
+    width: 130px;
 }
 
 .bazis
 {
-    width: 49px;
+    width: 59px;
 }
 
 .don
 {
-    width: 66px;
+    width: 76px;
 }
 
 .spectr
 {
-    width: 160px;
+    width: 170px;
 }
 
 /*-- SECTION ABOUT --*/
@@ -321,6 +329,29 @@ section
     position: relative;
     text-align: justify;
     width: 800px;
+}
+
+.about ul
+{
+    height: auto;
+    padding: 0 0 0 30px;
+    margin: 15px 0;
+}
+
+.about li
+{
+    font-size: 100%;
+    line-height: 1.5;
+    font-style: italic;
+    text-align: left;
+}
+
+.about p
+{
+    font-family: inherit;
+    font-size: 120%;
+    line-height: 1.3;
+    margin: 5px 0;
 }
 
 .more
@@ -600,9 +631,9 @@ form {
     padding: 3em 2em 2em 2em;
     background: #fafafa;
     border: 1px solid #ebebeb;
-    box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
-    -webkit-box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
-    -moz-box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+    box-shadow: rgba(0,0,0,0.14902) 0 1px 1px 0,rgba(0,0,0,0.09804) 0 1px 2px 0;
+    -webkit-box-shadow: rgba(0,0,0,0.14902) 0 1px 1px 0,rgba(0,0,0,0.09804) 0 1px 2px 0;
+    -moz-box-shadow: rgba(0,0,0,0.14902) 0 1px 1px 0,rgba(0,0,0,0.09804) 0 1px 2px 0;
 }
 
 .group {
@@ -781,7 +812,7 @@ input:focus ~ .highlight
 
 
 
-@media (min-width:1200px)
+@media screen and (min-width:1200px)
 {
     .container
     {
@@ -789,9 +820,58 @@ input:focus ~ .highlight
     }
 }
 
-@media screen and (max-width: 992px)
+@media screen and (max-width: 960px)
 {
-
+    .container
+    {
+        width: 100%;
+    }
+    /*-- HEADER --*/
+    .header__center h1
+    {
+        font-size: 36px;
+    }
+    .header__center h3
+    {
+        font-size: 22px;
+    }
+    .logo
+    {
+        height: 60px;
+        width: 120px;
+    }
+    /*-- SECTION ABOUT --*/
+    .about .section-content
+    {
+        width: 100%;
+    }
+    /*-- SECTION PROJECTS --*/
+    .item__container:first-child, .item__container:nth-child(4) {
+        margin-right: 0;
+    }
+    .item__container:nth-child(3), .item__container:last-child {
+        margin-left: 20px;
+    }
+    .item__container
+    {
+        margin-left: 20px;
+    }
+    /*-- SECTION PARTNERS --*/
+    .partners
+    {
+        text-align: center;
+    }
+    .partner
+    {
+        margin-left: 0;
+        margin-top: 30px;
+        width: 40%;
+    }
+    /*-- FOOTER --*/
+    .social-icons
+    {
+        right: 30px;
+    }
 }
 
 @media screen and (max-width: 768px)
@@ -799,8 +879,86 @@ input:focus ~ .highlight
 
 }
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 640px)
 {
+    .container
+    {
+        width: 100%;
+    }
+    p
+    {
+        font-size: 120%;
+        line-height: 1.2;
+        text-align: left;
+        text-indent: 15px;
+        margin: 5px 0;
+    }
+    section
+    {
+        padding: 15px 0;
+    }
+    /*-- Header --*/
+    .header__address-bar
+    {
+        height: 56px;
+    }
+    .header__top
+    {
+        display: none;
+    }
+    .header__center
+    {
+        top: 40%;
+    }
+    .header__contacts
+    {
+        display: none;
+    }
+    .header__center h1
+    {
+        font-size: 20px;
+    }
+    .logo{
+        height: 45px;
+        width: 90px;
+    }
+    .header__center h3
+    {
+        font-size: 16px;
+    }
+    .btn-header
+    {
+        margin-top: 0;
+    }
+    .header__bottom ul
+    {
+        margin: 0;
+        padding: 0;
+    }
+    /*-- header logos --*/
+    .partners-logos__list
+    {
+        margin-left: 5px;
+    }
+    .koshel
+    {
+        width: 70px;
+    }
+    .bazis
+    {
+        width: 40px;
+    }
+    .don
+    {
+        width: 45px;
+    }
+    .spectr
+    {
+        width: 90px;;
+    }
+
+    /*-- HEADER MENU --*/
+    /*-- left menu contacts --*/
     #mobile-header-menu__contacts
     {
         color: black;
@@ -813,9 +971,9 @@ input:focus ~ .highlight
         background: lightgrey;
         overflow-x: hidden;
         overflow-y: auto;
-        -webkit-box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
-        -moz-box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
-        box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
+        -webkit-box-shadow: 3px 0 6px rgba(0,0,0, .16), 3px 0 6px rgba(0,0,0, .23);
+        -moz-box-shadow: 3px 0 6px rgba(0,0,0, .16), 3px 0 6px rgba(0,0,0, .23);
+        box-shadow: 3px 0 6px rgba(0,0,0, .16), 3px 0 6px rgba(0,0,0, .23);
         -webkit-overflow-scrolling: touch;
         -webkit-transition: all 300ms;
         -moz-transition: all 300ms;
@@ -846,9 +1004,9 @@ input:focus ~ .highlight
         background: lightgrey;
         overflow-x: hidden;
         overflow-y: auto;
-        -webkit-box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
-        -moz-box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
-        box-shadow: 3px 0 6px rgba(#000, .16), 3px 0 6px rgba(#000, .23);
+        -webkit-box-shadow: 3px 0 6px rgba(0,0,0, .16), 3px 0 6px rgba(0,0,0, .23);
+        -moz-box-shadow: 3px 0 6px rgba(0,0,0, .16), 3px 0 6px rgba(0,0,0, .23);
+        box-shadow: 3px 0 6px rgba(0,0,0, .16), 3px 0 6px rgba(0,0,0, .23);
         -webkit-overflow-scrolling: touch;
         -webkit-transition: all 300ms;
         -moz-transition: all 300ms;
@@ -900,6 +1058,7 @@ input:focus ~ .highlight
         margin-right: 20px;
         display: inline-block;
     }
+    /*-- right menu main --*/
     #mobile-header-menu__main ul
     {
         position: relative;
@@ -980,7 +1139,7 @@ input:focus ~ .highlight
         text-align: left;
     }
 
-        .btn-close
+    .btn-close
     {
         display: inline-block;
         height: 45px;
@@ -1003,43 +1162,50 @@ input:focus ~ .highlight
     {
         float: right;
     }
+
+    /*-- SECTION ABOUT --*/
+
+    .about .section-content
+    {
+        width: 100%;
+    }
+    .item__container:first-child, .item__container:nth-child(4)
+    {
+        margin-right: 0;
+    }
+
+    .item__container:nth-child(3), .item__container:last-child
+    {
+        margin-left: 0;
+    }
+    .short-text
+    {
+        height: 188px;
+        overflow: hidden;
+    }
+
+    /*-- SECTION PARTNERS --*/
+
+    .section-content
+    {
+        text-align: center;
+    }
+    .social-icons
+    {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+
+
 }
 
 @media screen and (max-width: 320px)
 {
-    .container
-    {
-        width: 100%;
-    }
-    p
-    {
-        font-size: 120%;
-        line-height: 1.2;
-        text-align: left;
-        text-indent: 15px;
-        margin: 5px 0;
-    }
-    section
-    {
-        padding: 15px 0;
-    }
-    /*-- Header --*/
-    .header__address-bar
-    {
-        height: 56px;
-    }
-    .header__top
-    {
-        display: none;
-    }
-    .header__center
-    {
-        top: 40%;
-    }
-    .header__contacts
-    {
-        display: none;
-    }
+    /*-- HEADER --*/
+
     .header__center h1
     {
         font-size: 20px;
@@ -1062,27 +1228,7 @@ input:focus ~ .highlight
         margin: 0;
         padding: 0;
     }
-    /*-- header logos --*/
-    .partners-logos__list
-    {
-        margin-left: 5px;
-    }
-    .koshel
-    {
-        width: 70px;
-    }
-    .bazis
-    {
-        width: 40px;
-    }
-    .don
-    {
-        width: 45px;
-    }
-    .spectr
-    {
-        width: 90px;;
-    }
+
     /*-- SECTION ABOUT --*/
     .about
     {
@@ -1093,33 +1239,13 @@ input:focus ~ .highlight
         margin: 0 auto 15px;
         width: 100%;
     }
-    .about li
-    {
-        font-size: 100%;
-        line-height: 1.5;
-        font-style: italic;
-        text-align: left;
-    }
     /*-- SECTION PROJECTS --*/
     .item__container
     {
         height: 280px;
         width: 280px;
     }
-    .item__container:first-child, .item__container:nth-child(4)
-    {
-        margin-right: 0;
-    }
 
-    .item__container:nth-child(3), .item__container:last-child
-    {
-        margin-left: 0;
-    }
-    .short-text
-    {
-        height: 188px;
-        overflow: hidden;
-    }
     /*-- SECTION PARTNERS --*/
     .partners
     {
@@ -1153,9 +1279,10 @@ input:focus ~ .highlight
         position: relative;
         display: inline-block;
         width: 100%;
+        right: 0;
         text-align: center;
     }
-
 }
+
 
 
