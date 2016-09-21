@@ -1,11 +1,27 @@
 (function($){
 	function indexbg (){
-		var $wH, $headerContentBg, $headerBgH, $addressBar, $addressBarH;
-		$addressBar = $('.header__address-bar');
-		$addressBarH = $addressBar.outerHeight();
-		$wH = $(window).height();
-		$headerContentBg = $('.header-content');
-		$headerBgH = $headerContentBg.height($wH - $addressBarH);
+			var $wH, $headerContentBg, $headerBgH, $addressBar, $addressBarH;
+			$addressBar = $('.header__address-bar');
+			$addressBarH = $addressBar.outerHeight();
+			$wH = $(window).height();
+			$headerContentBg = $('.header-content');
+			$headerBgH = $headerContentBg.height($wH - $addressBarH);
+			alert($wH);
+		function resize (){
+			var $wH, $headerContentBg, $headerBgH, $addressBar, $addressBarH;
+			$addressBar = $('.header__address-bar');
+			$addressBarH = $addressBar.outerHeight();
+			$wH = $(window).height();
+			$headerContentBg = $('.header-content');
+			$headerBgH = $headerContentBg.height($wH - $addressBarH);			
+		}
+
+	var resizeTimer;
+	$(window).resize(function() {
+	    clearTimeout(resizeTimer);
+	    resizeTimer = setTimeout(resize, 100);
+	});
+
 	}
 
 	function readmore (){
