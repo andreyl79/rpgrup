@@ -6,7 +6,6 @@
 			$wH = $(window).height();
 			$headerContentBg = $('.header-content');
 			$headerBgH = $headerContentBg.height($wH - $addressBarH);
-			alert($wH);
 		function resize (){
 			var $wH, $headerContentBg, $headerBgH, $addressBar, $addressBarH;
 			$addressBar = $('.header__address-bar');
